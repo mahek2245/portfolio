@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="/static/events.css">
+</head>
+<body>
+    <h2>Events</h2>
+    <div class="events-container">
+        {% for event in events %}
+            <div class="event-card">
+                <h4>{{ event.title }}</h4>
+                <p>{{ event.description }}</p>
+                {% if event.file_paths %}
+                    <div class="event-images">
+                        {% for file in event.file_paths %}
+                            <a href="{{ url_for('uploaded_file', filename=file.split('/')[-1]) }}" target="_blank">
+                                <img src="{{ url_for('uploaded_file', filename=file.split('/')[-1]) }}" alt="Event Image {{ loop.index }}">
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffcccc; /* Light red background */
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-container, .events-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-card, .event-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+}
+
+.project-card h4, .event-card h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-card p, .event-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.file-links, .event-images {
+    margin-top: 10px;
+}
+
+.file-links a {
+    display: block;
+    margin-top: 5px;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.file-links a:hover {
+    text-decoration: underline;
+}
+
+.event-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}

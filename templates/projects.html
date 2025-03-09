@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" type="text/css" href="/static/projects.css">
+</head>
+<body>
+    <h2>Projects</h2>
+    <div class="projects-container">
+        {% for project in projects %}
+            <div class="project-card">
+                <h4>{{ project.title }}</h4>
+                <p>{{ project.description }}</p>
+                {% if project.file_paths %}
+                    <div class="file-links">
+                        {% for file in project.file_paths %}
+                            <a href="{{ url_for('uploaded_file', filename=file.split('/')[-1]) }}" target="_blank">View File {{ loop.index }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
