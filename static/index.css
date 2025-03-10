@@ -1,12 +1,12 @@
 h1 {
-    color: #333;
+    color: #020202;
     display :block;
     text-align: center;
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%; /* Makes the profile image round */
     display: block;
     margin: 20px auto; /* Centers the image */
@@ -17,18 +17,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffcccc; /* Light Red Background */
+    background-color: #86b4f1; /* Light Red Background */
     text-align: center;
 }
 
 /* Header Styling */
 header {
-    background-color: #ffffff; /* White background */
+    background-color: #f0f3f9; /* White background */
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
 }
 
 /* Navigation Links */
@@ -59,6 +60,17 @@ nav a:hover {
 footer {
     text-align: left;
     padding: 20px;
-    background: #ffffff;
+    background: #242529;
     margin-top: 20px;
+    -webkit-text-fill-color: #ffffff;
+}
+
+/* Hide certificates initially */
+#certificates {
+    display: none;
+}
+
+/* Hide certificates initially */
+#skills {
+    display: none;
 }
