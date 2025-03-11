@@ -39,6 +39,11 @@ def home():
 def projects():
     return render_template('projects.html', projects=projects)
 
+@app.route('/certifications')
+def certifications():
+    return render_template('certifications.html', certifications=certifications)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 
